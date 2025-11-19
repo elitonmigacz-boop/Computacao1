@@ -17,6 +17,7 @@ int main()
 	char primeiro, ultimo;
 	int i, j, tam;
 	
+	//Entrada dos dados pelo usuario 
 	for (i = 0; i < LINHAS; i++)
 	{
 		for (j = 0; j < COLUNAS; j++)
@@ -26,7 +27,8 @@ int main()
 			strcpy(matrizModificada[i][j], matrizOriginal[i][j]);
 		}
 	}
-
+    
+    //Processamento dos dados 
 	for (i = 0; i < LINHAS; i++)
 	{
 		for (j = 0; j < COLUNAS; j++)
@@ -41,7 +43,8 @@ int main()
 			}
 		}
 	}
-
+    
+    //Saida dos dados
 	printf("\nMatriz Original:\n");
 	for (i = 0; i < LINHAS; i++)
 	{
@@ -65,6 +68,8 @@ int main()
 	return 0;
 }
 
+//Funcoes auxiliares
+//Na manipulacao de caracteres pode usar a diferenca de dados da Tabela ASCII
 char paraMinusculo(char c)
 {
 	if (c >= 'A' && c <= 'Z')
@@ -101,4 +106,3 @@ void inverterString(char str[])
 		j--;
 	}
 }
-
